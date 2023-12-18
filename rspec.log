@@ -150,7 +150,7 @@ Userモデルのテスト
 [32m      title編集フォームが表示される[0m
 [32m      body編集フォームが表示される[0m
 [32m      Update Bookボタンが表示される[0m
-[31m      Showリンクが表示される (FAILED - 1)[0m
+[32m      Showリンクが表示される[0m
 [32m      Backリンクが表示される[0m
     編集成功のテスト
 [32m      titleが正しく更新される[0m
@@ -161,7 +161,7 @@ Userモデルのテスト
 [32m      URLが正しい[0m
 [32m      自分と他人の画像が表示される: fallbackの画像がサイドバーの1つ＋一覧(2人)の2つの計3つ存在する[0m
 [32m      自分と他人の名前がそれぞれ表示される[0m
-[31m      自分と他人のshowリンクがそれぞれ表示される (FAILED - 2)[0m
+[32m      自分と他人のshowリンクがそれぞれ表示される[0m
     サイドバーの確認
 [32m      自分の名前と紹介文が表示される[0m
 [32m      自分のユーザ編集画面へのリンクが存在する[0m
@@ -243,10 +243,10 @@ Userモデルのテスト
 [32m        投稿の編集リンクが表示されない[0m
 [32m        投稿の削除リンクが表示されない[0m
       サイドバーの確認
-[31m        他人の名前と紹介文が表示される (FAILED - 3)[0m
-[31m        他人のユーザ編集画面へのリンクが存在する (FAILED - 4)[0m
-[31m        自分の名前と紹介文は表示されない (FAILED - 5)[0m
-[31m        自分のユーザ編集画面へのリンクは存在しない (FAILED - 6)[0m
+[31m        他人の名前と紹介文が表示される (FAILED - 1)[0m
+[31m        他人のユーザ編集画面へのリンクが存在する (FAILED - 2)[0m
+[31m        自分の名前と紹介文は表示されない (FAILED - 3)[0m
+[31m        自分のユーザ編集画面へのリンクは存在しない (FAILED - 4)[0m
     他人の投稿編集画面
 [32m      遷移できず、投稿一覧画面にリダイレクトされる[0m
     他人のユーザ詳細画面のテスト
@@ -270,14 +270,14 @@ Userモデルのテスト
 [32m    投稿詳細画面[0m
   アイコンのテスト
     トップ画面
-[31m      本のアイコンが表示される (FAILED - 7)[0m
+[32m      本のアイコンが表示される[0m
     アバウト画面
-[31m      本のアイコンが表示される (FAILED - 8)[0m
+[32m      本のアイコンが表示される[0m
     ヘッダー: ログインしていない場合
 [32m      Homeリンクのアイコンが表示される[0m
 [32m      Aboutリンクのアイコンが表示される[0m
 [32m      Sign upリンクのアイコンが表示される[0m
-[31m      Log inリンクのアイコンが表示される (FAILED - 9)[0m
+[32m      Log inリンクのアイコンが表示される[0m
     ヘッダー: ログインしている場合
 [32m      Homeリンクのアイコンが表示される[0m
 [32m      Usersリンクのアイコンが表示される[0m
@@ -291,63 +291,33 @@ Userモデルのテスト
 
 Failures:
 
-  1) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Showリンクが表示される
-     [31mFailure/Error: expect(page).to have_link 'Show', href: book_path(book)[0m
-     [31m  expected to find link "Show" with href "/books/1" but there were no matches[0m
-     [36m# ./spec/system/02_after_login_spec.rb:234:in `block (4 levels) in <main>'[0m
-
-  2) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される
-     [31mFailure/Error: expect(page).to have_link 'Show', href: user_path(other_user)[0m
-     [31m  expected to find link "Show" with href "/users/2" but there were no matches[0m
-     [36m# ./spec/system/02_after_login_spec.rb:281:in `block (4 levels) in <main>'[0m
-
-  3) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
+  1) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される
      [31mFailure/Error: expect(page).to have_content other_user.introduction[0m
-     [31m  expected to find text "rkuj9hwuhx8yg0vgk7gx" in "Bookers\nHome Users Books Log out\nUser info\nname jprsf0zgnd introduction 4csz0zvlol2parctjlsf\nNew book\nTitle\nOpinion\nBook detail\n2q7v0744ew ykexl gpzacg3mcvwd3dqounfu\nCopyRight infratop.inc"[0m
+     [31m  expected to find text "pdkg07mc9f8qvhkjow6m" in "Bookers\nHome Users Books Log out\nUser info\nname 95mdc2ufmv introduction jibfkbwcmiwt73mrctp1\nNew book\nTitle\nOpinion\nBook detail\nauz4sf30gf 99zj5 3e9my7i6b6yg62hueil2\nCopyRight infratop.inc"[0m
      [36m# ./spec/system/03_finishing_touches_spec.rb:245:in `block (5 levels) in <main>'[0m
 
-  4) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
+  2) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する
      [31mFailure/Error: expect(page).to have_link '', href: edit_user_path(other_user)[0m
      [31m  expected to find link "" with href "/users/2/edit" but there were no matches[0m
      [36m# ./spec/system/03_finishing_touches_spec.rb:248:in `block (5 levels) in <main>'[0m
 
-  5) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
+  3) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない
      [31mFailure/Error: expect(page).not_to have_content user.name[0m
-     [31m  expected not to find text "f3w6tii2sy" in "Bookers\nHome Users Books Log out\nUser info\nname f3w6tii2sy introduction rfqlukbhu6ghr5w67tmf\nNew book\nTitle\nOpinion\nBook detail\nk1f1eqh06m v4l6i odq4pb7ejajaj4i27kwk\nCopyRight infratop.inc"[0m
+     [31m  expected not to find text "py5zwtjxsz" in "Bookers\nHome Users Books Log out\nUser info\nname py5zwtjxsz introduction xgth9byinnj2m7lcsyaa\nNew book\nTitle\nOpinion\nBook detail\n3a59iivjpj b7gm2 a3ybh3mgiygold1bh9tv\nCopyRight infratop.inc"[0m
      [36m# ./spec/system/03_finishing_touches_spec.rb:251:in `block (5 levels) in <main>'[0m
 
-  6) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクは存在しない
+  4) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクは存在しない
      [31mFailure/Error: expect(page).not_to have_link '', href: edit_user_path(user)[0m
      [31m  expected not to find visible link "" with href "/users/1/edit", found 1 match: ""[0m
      [36m# ./spec/system/03_finishing_touches_spec.rb:255:in `block (5 levels) in <main>'[0m
 
-  7) [STEP3] 仕上げのテスト アイコンのテスト トップ画面 本のアイコンが表示される
-     [31mFailure/Error: is_expected.to have_selector '.fa-solid.fa-book, .fas.fa-book'[0m
-     [31m  expected to find css ".fa-solid.fa-book, .fas.fa-book" but there were no matches[0m
-     [36m# ./spec/system/03_finishing_touches_spec.rb:364:in `block (4 levels) in <main>'[0m
-
-  8) [STEP3] 仕上げのテスト アイコンのテスト アバウト画面 本のアイコンが表示される
-     [31mFailure/Error: is_expected.to have_selector '.fa-solid.fa-book, .fas.fa-book'[0m
-     [31m  expected to find css ".fa-solid.fa-book, .fas.fa-book" but there were no matches[0m
-     [36m# ./spec/system/03_finishing_touches_spec.rb:376:in `block (4 levels) in <main>'[0m
-
-  9) [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしていない場合 Log inリンクのアイコンが表示される
-     [31mFailure/Error: is_expected.to have_selector '.fa-solid.fa-right-to-bracket, .fa-solid.fa-sign-in-alt, .fas.fa-sign-in-alt'[0m
-     [31m  expected to find css ".fa-solid.fa-right-to-bracket, .fa-solid.fa-sign-in-alt, .fas.fa-sign-in-alt" but there were no matches[0m
-     [36m# ./spec/system/03_finishing_touches_spec.rb:397:in `block (4 levels) in <main>'[0m
-
-Finished in 1 minute 24.9 seconds (files took 3.61 seconds to load)
-[31m201 examples, 9 failures[0m
+Finished in 54.12 seconds (files took 2.19 seconds to load)
+[31m201 examples, 4 failures[0m
 
 Failed examples:
 
-[31mrspec ./spec/system/02_after_login_spec.rb:233[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 表示の確認 Showリンクが表示される[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:279[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:243[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人の名前と紹介文が表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:247[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 他人のユーザ編集画面へのリンクが存在する[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:250[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分の名前と紹介文は表示されない[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:254[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト サイドバーの確認 自分のユーザ編集画面へのリンクは存在しない[0m
-[31mrspec ./spec/system/03_finishing_touches_spec.rb:363[0m [36m# [STEP3] 仕上げのテスト アイコンのテスト トップ画面 本のアイコンが表示される[0m
-[31mrspec ./spec/system/03_finishing_touches_spec.rb:375[0m [36m# [STEP3] 仕上げのテスト アイコンのテスト アバウト画面 本のアイコンが表示される[0m
-[31mrspec ./spec/system/03_finishing_touches_spec.rb:396[0m [36m# [STEP3] 仕上げのテスト アイコンのテスト ヘッダー: ログインしていない場合 Log inリンクのアイコンが表示される[0m
 
